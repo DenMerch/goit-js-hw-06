@@ -6,3 +6,11 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+const items = "";
+ingredients.forEach(ingredient => {
+  const item = document.createElement("li");
+  item.textContent = ingredient;
+  items += `${item}`;
+  console.log(items);
+});
+
