@@ -18,24 +18,10 @@ gallery.style.marginLeft = "auto";
 gallery.style.marginRight = "auto";
 gallery.style.gap = "50px";
 gallery.style.flexDirection = "column";
+const markup = images.map((image) => `<li class = "gallery__item" style = "list-style:none; width:1300px">
+<img class = "gallery__img" style = "object-fit:contain; width:1200px" src=" ${image.url}" alt="${image.alt}"></img></li>`).join("");
 
-images.forEach(image => {
-  const urlLink = image.url;
-  const alt = image.alt;
-  const item = `<li class = "gallery__item"><img class = "gallery__img" src=" ${urlLink} " alt="${alt}"></img></li>`;
-  gallery.insertAdjacentHTML("beforeend", item);
-});
-const items = document.querySelectorAll(".gallery__item");
-items.forEach(item => {
-  item.style.listStyle = "none";
-  item.style.width = "1300px";
-})
-
-const image = document.querySelectorAll(".gallery__img");
-image.forEach(image => {
-  image.style.objectFit = "contain";
-  image.style.width = "1200px";
-})
+gallery.innerHTML = markup;
 
 
 
