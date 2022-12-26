@@ -10,3 +10,4 @@ input.addEventListener("blur", (event) => {
         input.classList.add("invalid")
     }
 })
+// чого в мене зеленіє?
