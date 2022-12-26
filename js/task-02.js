@@ -7,6 +7,10 @@ const ingredients = [
   'Condiments',
 ];
 const list = document.querySelector("#ingredients")
-const markup = ingredients.map((ingredient) => `<li class= "list-item"> ${ingredient}</li>`).join("");
-list.innerHTML = markup;
+const markup = ingredients.map((ingredient) => {
+  let itemList = document.createElement("li");
+  itemList.textContent = ingredient;
+  return itemList;
+});
+list.append(...markup);
 

@@ -21,7 +21,7 @@ gallery.style.flexDirection = "column";
 const markup = images.map((image) => `<li class = "gallery__item" style = "list-style:none; width:1300px">
 <img class = "gallery__img" style = "object-fit:contain; width:1200px" src=" ${image.url}" alt="${image.alt}"></img></li>`).join("");
 
-gallery.innerHTML = markup;
+gallery.insertAdjacentHTML("beforeend", markup);
 
 
 
