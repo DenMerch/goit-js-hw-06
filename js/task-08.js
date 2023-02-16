@@ -1,3 +1,4 @@
+import save from "./localStorage.js";
 const form = document.querySelector(".login-form");
 form.addEventListener("submit", handSubmit);
 function handSubmit(event) {
@@ -13,6 +14,9 @@ function handSubmit(event) {
         email: email.value,
         password: password.value,
     }
+    save("new", user);
+
     console.log(user);
     event.currentTarget.reset();
 }
+
